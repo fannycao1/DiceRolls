@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Roll Roll Roll Your Dice</title>
+    <style>
+      body{
+        font-family: 'Courier New', monospace;
+        background-color: #FFD9D4;
+      }
+      
+      div{
+        text-align: center;
+      }
+
+      .button{
+        background-color: #ffcccc;
+        font-family:'Courier New', monospace;
+        font-weight: bold;
+        border: 2px solid indianred;
+        padding: 7px;
+        margin: 4px 2px;
+        border-radius: 50%;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: #EC8993;
+        color: white;
+      }
+      
+      table, td, th {
+        border: 2px solid indianred;
+        text-align: center;
+        background: #ffcccc;
+      }
+
+      table {
+        width: 75%;
+        border-collapse: collapse;
+        margin: auto;
+      }
+
+      button{
+        align-self: center;
+      }
+    </style>
+    <script src="script.js"></script>
+  </head>
+    <body onload = "initialize();">
+      <div>
+        <h1>Roll Roll Roll Your Dice</h1>
+        <form id = "inputform">
+          How many dice would you like to roll? 
+          <label>
+            <input type = "radio" name = "dices" value = "1" /> 1
+          </label>
+          <label>
+            <input type = "radio" name = "dices" value = "2"/> 2
+          </label>
+          <label>
+            <input type = "radio" name = "dices" value = "3"/> 3
+          </label>
+    
+          <br />How many times would you like to roll the die/dice?
+          <input type = "text" name = "rolltimes">
+          <br />
+        </form>
+  
+        <button class = "button" onclick = "rollDice();">Roll</button>
+        <button class = "button" onclick = "clearTable();">Clear</button> 
+      <br /><br />
+      </div>
+      
+      <table id = "dicetable"> 
+        <tr id = "firstrow">
+          <th>Roll</th>
+        </tr>
+      </table>
+      
+      <br /> <br />
+      <table id = "newtable">
+        <tr>
+          <th></th>
+          <th>Results</th>
+        </tr>
+        <tr id = "mean">
+          <th>Mean</th>
+        </tr>
+        <tr id = "median">
+          <th>Median</th>
+        </tr>
+        <tr id = "mode">
+          <th>Mode</th>
+        </tr>
+        <tr id = "doubleamount">
+          <th># of Doubles</th>
+        </tr>
+        <tr id = "tripleamount">
+          <th># of Triples</th>
+        </tr>
+      </table>
+  
+    </body>
+  </head>
+</html>
